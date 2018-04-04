@@ -8,7 +8,6 @@ function benchmark($closure, array $data, int $number_of_cycles)
     echo "Function '{$closure}': ";
     for ($i = 0; $i < $number_of_cycles; $i++) {
         $closure($data);
-//        echo '<pre>'.print_r($data, true).'</pre>';
     }
     $time = microtime(true) - $start_time;
     echo "{$time}" . PHP_EOL;
